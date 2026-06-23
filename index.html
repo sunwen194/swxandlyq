@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的小窝 ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 背景粒子装饰 -->
+    <div class="bg-particles">
+        <span class="particle p1">❤</span>
+        <span class="particle p2">❤</span>
+        <span class="particle p3">❤</span>
+        <span class="particle p4">❤</span>
+        <span class="particle p5">❤</span>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>Our Love Story</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#story">恋爱故事</a></li>
+                    <li><a href="#moments">甜蜜瞬间</a></li>
+                    <li><a href="#anniversary">纪念日</a></li>
+                    <li><a href="#future">未来计划</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图区域 -->
+    <section id="home" class="carousel">
+        <div class="carousel-inner">
+
+            <!-- ========== 第1张轮播图 ========== -->
+            <!-- 📌 修改图片：把 url('images/photo1.jpg') 改成你的图片路径 -->
+            <!-- 📌 修改大小：调整 --carousel-height: 85vh 数值，越小图片区域越小 -->
+            <div class="carousel-item active" style="--carousel-height: 100vh;">
+                <div class="carousel-bg" style="background-image: url('images/漂亮老婆1.jpg');"></div>
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h1 class="glow-text">亲爱的，欢迎来到我们的小窝</h1>
+                    <p>这里记录着我们的点点滴滴，只属于你和我</p>
+                    <div class="love-counter">
+                        <span class="counter-label">我们已经陪伴了</span>
+                        <span class="counter" id="loveDays">2324</span>
+                        <span class="counter-label">天</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== 第2张轮播图 ========== -->
+            <div class="carousel-item" style="--carousel-height: 85vh;">
+                <div class="carousel-bg" style="background-image: url('images/勾手.jpg');"></div>
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h1 class="glow-text">谢谢你出现在我的生命里</h1>
+                    <p>每一天都是爱你的新开始</p>
+                    <div class="love-emoji">💖</div>
+                </div>
+            </div>
+
+            <!-- ========== 第3张轮播图 ========== -->
+            <div class="carousel-item" style="--carousel-height: 85vh;">
+                <div class="carousel-bg" style="background-image: url('images/合照1.jpg');"></div>
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h1 class="glow-text">未来的路，我们一起走</h1>
+                    <p>执子之手，与子偕老</p>
+                    <div class="love-emoji">💕</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 轮播左右箭头 -->
+        <button class="carousel-control prev" onclick="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control next" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- 轮播指示器 -->
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+
+        <!-- 向下滚动提示 -->
+        <div class="scroll-hint">
+            <span>向下滑动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 恋爱故事 -->
+    <section id="story" class="story section">
+        <div class="container">
+            <h2 class="section-title">我们的恋爱故事</h2>
+            <div class="story-timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2019.09.01</div>
+                    <div class="timeline-content glass-card">
+                        <h3><i class="fas fa-star"></i> 初次相遇</h3>
+                        <p>那是我们初识在学校的时候，我笑眯眯的问你：你就是梁雨晴是吗？故事也就此展开。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022.01.14</div>
+                    <div class="timeline-content glass-card">
+                        <h3><i class="fas fa-heart"></i> 正式表白</h3>
+                        <p>是一个深夜，一个勇敢的小女孩鼓起勇气说出的真心话。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2026.05.01</div>
+                    <div class="timeline-content glass-card">
+                        <h3><i class="fas fa-plane"></i> 第一次旅行</h3>
+                        <p>南京我自己去了。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2027.10.01</div>
+                    <div class="timeline-content glass-card">
+                        <h3><i class="fas fa-home"></i> 见家长</h3>
+                        <p>不用留给我了，我们不会有未来了。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 甜蜜瞬间 -->
+    <section id="moments" class="moments section">
+        <div class="container">
+            <h2 class="section-title">甜蜜瞬间</h2>
+            <div class="photo-grid">
+
+                <div class="photo-item">
+                    <div class="photo-frame glass-card">
+                        <img src="images/合照2.jpg" alt="第一次约会">
+                        <div class="photo-caption">
+                            <i class="fas fa-heart"></i> 第一次约会
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-frame glass-card">
+                        <img src="images/戒指.jpg" alt="第一枚戒指">
+                        <div class="photo-caption">
+                            <i class="fas fa-gem"></i> 第一枚戒指
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-frame glass-card">
+                        <img src="images/礼物.jpg" alt="你的生日">
+                        <div class="photo-caption">
+                            <i class="fas fa-birthday-cake"></i> 你的生日
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 纪念日 -->
+    <section id="anniversary" class="anniversary section">
+        <div class="container">
+            <h2 class="section-title">重要纪念日</h2>
+            <div class="anniversary-grid">
+
+                <div class="anniversary-card glass-card">
+                    <div class="anniversary-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>在一起</h3>
+                    <div class="anniversary-date">2022.01.14</div>
+                    <div class="anniversary-days">已经 <span id="togetherDays">2324</span> 天</div>
+                </div>
+
+                <div class="anniversary-card glass-card">
+                    <div class="anniversary-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>你的生日</h3>
+                    <div class="anniversary-date">07月15日</div>
+                    <div class="anniversary-days">还有 <span id="birthdayDays">22</span> 天</div>
+                </div>
+
+                <div class="anniversary-card glass-card">
+                    <div class="anniversary-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>一百天</h3>
+                    <div class="anniversary-date">2022.04.24</div>
+                    <div class="anniversary-days">已过 <span>100</span> 天</div>
+                </div>
+
+                <div class="anniversary-card glass-card">
+                    <div class="anniversary-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>永远爱你</h3>
+                    <div class="anniversary-date">每一天</div>
+                    <div class="anniversary-days">爱你 <span>∞</span> 天</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 未来计划 -->
+    <section id="future" class="future section">
+        <div class="container">
+            <h2 class="section-title">未来计划</h2>
+            <div class="future-content">
+
+                <div class="future-list glass-card">
+                    <h3><i class="fas fa-list-check"></i> 想和你一起做的事</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 一起看一场演唱会</li>
+                        <li><i class="fas fa-check-circle"></i> 一起去海边看日出</li>
+                        <li><i class="fas fa-check-circle"></i> 一起养一只小猫</li>
+                        <li><i class="fas fa-check-circle"></i> 一起去迪士尼</li>
+                        <li><i class="fas fa-check-circle"></i> 一起拍一组写真</li>
+                        <li><i class="fas fa-check-circle"></i> 一起看遍四季风景</li>
+                    </ul>
+                </div>
+
+                <div class="future-dream glass-card">
+                    <h3><i class="fas fa-cloud"></i> 我的心愿</h3>
+                    <div class="dream-bottle">
+                        <i class="fas fa-heart"></i>
+                        <p>愿我们的爱情，像星辰一样永恒，像大海一样深邃。<br>无论未来有多少风雨，我都想牵着你的手，一起走下去。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> 关于我们</h3>
+                    <p>这是一个只属于我们的小窝，记录着我们的点点滴滴。</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> 快速导航</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#story">恋爱故事</a></li>
+                        <li><a href="#moments">甜蜜瞬间</a></li>
+                        <li><a href="#anniversary">纪念日</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-infinity"></i> 爱你的天数</h3>
+                    <p class="love-number" id="footerDays">2324</p>
+                    <p>并且还在继续增加...</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with <i class="fas fa-heart" style="color:#ff6b6b;"></i> by 孙文翔 & 梁雨晴</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== 音乐播放器（带歌词字幕） ========== -->
+    <div class="music-player-wrapper">
+
+        <!-- 歌词字幕面板 -->
+        <div class="lyrics-panel" id="lyricsPanel">
+            <div class="lyrics-header">
+                <span class="lyrics-title">歌词</span>
+                <button class="lyrics-close" onclick="toggleLyrics()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="lyrics-container" id="lyricsContainer">
+                <div class="lyrics-placeholder">
+                    <i class="fas fa-music"></i>
+                    <p>播放音乐后显示歌词</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 音乐播放器主体 -->
+        <div class="music-player glass-card">
+            <!-- 唱片封面 -->
+            <div class="music-disc" id="musicDisc">
+                <img src="images/牵手.jpg" alt="专辑封面" id="albumCover">
+            </div>
+
+            <!-- 歌曲信息 -->
+            <div class="music-info">
+                <div class="music-title" id="musicTitle">选择一首歌曲</div>
+                <div class="music-artist" id="musicArtist">--</div>
+            </div>
+
+            <!-- 控制按钮 -->
+            <div class="music-controls">
+                <button class="music-btn" onclick="prevSong()" title="上一首">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="music-btn play-btn" onclick="togglePlay()" title="播放/暂停">
+                    <i class="fas fa-play" id="playIcon"></i>
+                </button>
+                <button class="music-btn" onclick="nextSong()" title="下一首">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+
+            <!-- 歌词按钮 -->
+            <button class="music-btn lyrics-btn" onclick="toggleLyrics()" title="歌词">
+                <i class="fas fa-align-center"></i>
+            </button>
+
+            <!-- 歌单按钮 -->
+            <button class="music-btn playlist-btn" onclick="togglePlaylist()" title="歌单">
+                <i class="fas fa-list"></i>
+            </button>
+
+            <!-- 进度条 -->
+            <div class="progress-bar">
+                <span class="current-time" id="currentTime">0:00</span>
+                <div class="progress-track" onclick="seekMusic(event)">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="total-time" id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <!-- 歌单面板 -->
+        <div class="playlist-panel" id="playlistPanel">
+            <div class="playlist-header">
+                <span>播放列表</span>
+                <button class="playlist-close" onclick="togglePlaylist()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="playlist-content" id="playlistContent">
+                <!-- 歌单会通过JS动态生成 -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 隐藏的音频标签 -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
